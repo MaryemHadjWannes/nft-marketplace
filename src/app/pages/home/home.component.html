@@ -1,0 +1,71 @@
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover, Collect & Sell Extraordinary NFTs</h1>
+            <p>Explore the best digital art and collectibles on the most secure NFT marketplace</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search items, collections, and creators">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse Categories</h2>
+            <div class="category-list">
+                <div class="category-item active">All Items</div>
+                <div class="category-item">Art</div>
+                <div class="category-item">Photography</div>
+                <div class="category-item">Music</div>
+                <div class="category-item">Virtual Worlds</div>
+                <div class="category-item">Trading Cards</div>
+                <div class="category-item">Collectibles</div>
+                <div class="category-item">Sports</div>
+                <div class="category-item">Utility</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured NFTs -->
+    <section class="featured-nfts">
+        <div class="container">
+            <h2 class="section-title">Featured NFTs <a href="#">View all</a></h2>
+            <div class="nft-grid">
+                <div class="nft-card" *ngFor="let nft of featuredNFTs">
+                  <img [src]="nft.image" alt="NFT" class="nft-image">
+                  <div class="nft-info">
+                    <h3 class="nft-title">{{ nft.title }}</h3>
+                    <div class="nft-creator">
+                      <img [src]="nft.avatar" alt="Creator" class="creator-avatar">
+                      <span>{{ nft.creator }}</span>
+                    </div>
+                    <div class="nft-price">
+                      <div>
+                        <div class="price-eth">{{ nft.priceEth }} ETH</div>
+                        <div class="price-usd">{{ nft.priceUsd }}</div>
+                      </div>
+                      <button class="like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Collections -->
+    <section class="trending-collections">
+        <div class="container">
+            <h2 class="section-title">Trending Collections <a href="#">View all</a></h2>
+            <div class="collection-list">
+                <div class="collection-card" *ngFor="let collection of trendingCollections">
+                  <img [src]="collection.image" alt="Collection" class="collection-avatar">
+                  <div class="collection-info">
+                    <h4>{{ collection.name }}</h4>
+                    <p>{{ collection.desc }}</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>

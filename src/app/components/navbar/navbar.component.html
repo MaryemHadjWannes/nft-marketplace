@@ -1,0 +1,21 @@
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <a routerLink="/">Niftique</a>
+    </div>
+
+    <nav class="nav-links">
+      <a routerLink="/explore">Explore</a>
+      <a routerLink="/create">Create</a>
+      <a routerLink="/community">Community</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/profile">Profile</a>
+    </nav>
+    <div class="nav-links">
+    
+    <button class="wallet-btn" (click)="connectWallet()">
+      {{ walletService.walletAddress || 'Connect Wallet' }}
+    </button>
+  </div>
+  </div>
+</header>

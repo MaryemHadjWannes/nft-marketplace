@@ -1,13 +1,27 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
 
-export const appConfig: ApplicationConfig = {
+import { HomeComponent } from './pages/home/home.component';
+import { ExploreComponent } from './pages/explore/explore.component';
+import { CreateComponent } from './pages/create/create.component';
+import { CommunityComponent } from './pages/community/community.component';
+import { AboutComponent } from './pages/about/about.component';
+
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+export const appConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
-    provideRouter(routes), provideClientHydration(withEventReplay())
+    provideRouter(routes),
+  ],
+  standaloneComponents: [
+    NavbarComponent,
+    FooterComponent,
+    HomeComponent,
+    ExploreComponent,
+    CreateComponent,
+    CommunityComponent,
+    AboutComponent,
   ]
 };
