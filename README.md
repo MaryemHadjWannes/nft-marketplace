@@ -1,5 +1,8 @@
 # NiftiqueNftMarketplace
 
+![Niftique-market-place](https://github.com/user-attachments/assets/4b79f096-0f86-46a1-83ef-377ab59c492e)
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
 
 ## Development server
