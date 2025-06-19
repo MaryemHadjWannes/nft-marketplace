@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/883e85f4-9935-4209-afea-b2cd6b737e9f)
 
+![Screenshot from 2025-06-19 14-38-49](https://github.com/user-attachments/assets/482eb1a1-8067-45be-910c-9b11d4d86164)
+
 
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
