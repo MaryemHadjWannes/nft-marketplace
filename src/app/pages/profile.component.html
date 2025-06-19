@@ -1,5 +1,21 @@
-<div class="profile">
-  <h2>Wallet Profile</h2>
-  <p *ngIf="address">Connected Address: <strong>{{ address }}</strong></p>
-  <p *ngIf="!address">No wallet connected.</p>
+<!-- src/app/pages/profile/profile.component.html -->
+<div class="profile-page">
+  <div class="profile-header">
+    <div class="avatar"></div>
+    <div class="info">
+      <h1>Your Profile</h1>
+      <p *ngIf="address">Connected Address: <strong>{{ address }}</strong></p>
+      <p *ngIf="!address">No wallet connected.</p>
+    </div>
+  </div>
+  
+  <div class="tabs">
+    <div class="tab active">Your NFTs</div>
+    <div class="tab">Favorites</div>
+    <div class="tab">Activity</div>
+  </div>
+  
+  <div class="nft-grid">
+    <!-- User's NFTs would go here -->
+  </div>
 </div>

@@ -1,5 +1,49 @@
-<section class="container">
-  <h1 class="page-title">Explore NFTs</h1>
-  <p>Browse our latest trending NFTs and filter by category, artist, or price.</p>
-  <div class="coming-soon">[🔍 Explore grid coming soon]</div>
-</section>
+<div class="page-container">
+  <aside class="sidebar" [class.closed]="isSidebarClosed">
+    <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+    <ul>
+      <li><i class="icon">🏠</i> Discover</li>
+      <li><i class="icon">📊</i> Stats</li>
+      <li><i class="icon">⏱️</i> Activity</li>
+      <li><i class="icon">🎁</i> Rewards</li>
+      <li><i class="icon">🎨</i> Studio</li>
+      <li><i class="icon">👤</i> Profile</li>
+      <li><i class="icon">📚</i> Resources</li>
+      <li><i class="icon">⚙️</i> Settings</li>
+    </ul>
+  </aside>
+
+  <div class="explore-main">
+    <section class="explore-hero">
+      <h1>Explore Exclusive NFTs</h1>
+      <p>Real-time drops from top creators — discover, trade, and own the future.</p>
+    </section>
+
+    <section class="nft-grid">
+      <div class="nft-card" *ngFor="let nft of featuredNFTs">
+        <img [src]="nft.image" alt="NFT" />
+        <div class="nft-overlay">
+          <h3>{{ nft.title }}</h3>
+          <div class="creator">
+            <img [src]="nft.avatar" />
+            <span>{{ nft.creator }}</span>
+          </div>
+          <p>{{ nft.priceEth }} ETH ({{ nft.priceUsd }})</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <aside class="trending-sidebar">
+    <h3>🔥 Trending Tokens</h3>
+    <ul class="trending-list">
+      <li *ngFor="let token of trendingTokens">
+        <div class="token-symbol">{{ token.symbol }}</div>
+        <div class="token-meta">
+          <div class="price">{{ token.price }}</div>
+          <div class="change" [class.negative]="token.change < 0">{{ token.change }}%</div>
+        </div>
+      </li>
+    </ul>
+  </aside>
+</div>

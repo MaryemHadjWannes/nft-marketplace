@@ -399,3 +399,54 @@ body {
                 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             }
         }
+
+
+        /* Add to styles.css */
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+  --dark: #0f172a;
+  --dark-light: #1e293b;
+  --gray: #94a3b8;
+  --light: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: white;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add hover effects for all interactive elements */
+button, a {
+  transition: all 0.3s ease;
+}
+
+/* Add focus styles for accessibility */
+button:focus, input:focus, a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+a, button {
+  cursor: pointer;
+}
